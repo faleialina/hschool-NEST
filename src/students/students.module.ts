@@ -1,12 +1,12 @@
 import { MiddlewareConsumer, Module, RequestMethod } from '@nestjs/common';
 import { Validation } from 'src/middlewares';
-import { StudentsController } from './students.controller';
-import { StudentsService } from './students.service';
+import { StudController } from './students.controller';
+import { StudService } from './students.service';
 
 @Module({
   imports: [],
-  controllers: [StudentsController],
-  providers: [StudentsService],
+  controllers: [StudController],
+  providers: [StudService],
 })
 export class StudentsModule {
   oconfigure(objMiddleware: MiddlewareConsumer) {
